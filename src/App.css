@@ -1,5 +1,9 @@
-.App {
-  text-align: center;
+  .App {
+  /* text-align: center; */
+  height: 100vh;
+  display: flex;
+  background-color: black;
+  color: wheat;
 }
 
 .App-logo {
@@ -35,4 +39,201 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.main{
+  width: 75%;
+  background: linear-gradient(to bottom , rgba(0,0,0,0),#020230 ), url("/public/assets/kbc.jpg") center ;
+  display: flex;
+  flex-direction: column;
+}
+
+.top{
+  height: 50%;
+  position: relative;
+   
+}
+.bottom{
+  height: 50%;
+}
+
+.timer{
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 700;
+  position: absolute;
+  bottom: 10px;
+  left: 80px;
+}
+
+.kbc{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.questions{
+    width: 80%;
+    background: linear-gradient(#100241,black);
+    border: 1px solid white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.answers{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.answer{
+  text-align: center;
+  width: 38%;
+  padding: 12px;
+  background: linear-gradient(#0e0124,#22074d);
+  display: flex;
+  border: 2px solid black;
+  margin: 15px;
+  border-radius: 10px;
+  font-size: 19px;
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+  font-weight: 300;
+}
+
+.answer:hover {
+    background: green;
+    cursor: pointer;
+  }
+
+
+.active{
+  background: green;
+  cursor: pointer;
+}
+.answer.correct{
+  animation: correct 2s ease;
+}
+
+@keyframes correct {
+  0%,22%,42%{
+    background: mediumblue;
+  }
+  20%,40%,60%{
+    background: linear-gradient(#0e0124,#22074d);
+  }
+  62%,100%{
+    background: green;
+  }
+}
+.answer.wrong{
+  animation: wrong 2s ease;
+}
+
+@keyframes wrong {
+  0%,22%,42%{
+    background: mediumblue;
+  }
+  20%,40%,60%{
+    background: linear-gradient(#0e0124,#22074d);
+  }
+  62%,100%{
+    background: crimson;
+  }
+}
+
+.pyramid{
+  width: 25%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.moneylist{
+  list-style: none;
+  /* width: 100%; */
+  padding: 20px;
+}
+.moneyitem{
+  display: flex;
+  width: 80%;
+  padding: 5px;
+  border-radius: 5px;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.moneyitem.active{
+  background-color: blue;
+  
+}
+.moneyListItemNumber{
+  font-size: 18px;
+  font-weight: 100;
+  width: 30%;
+  /* padding: 3px;
+width: 30%; */
+}
+.moneyListItemAmount{
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.endGame{
+  position: relative;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.start{
+  width: 250px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+align-items: center;
+position: relative;
+top: 0;
+right: 0;
+left: 0;
+bottom: 0;
+margin: auto;
+}
+
+.startInput{
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+}
+.startInput:focus{
+  outline: none;
+}
+
+.startBut{
+  width: 50%;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
 }
